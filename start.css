@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&display=swap');
+body{
+    background-color: #222831;
+     font-family: "Cairo", sans-serif;
+    
+}
+
+header{
+ display: flex;/*ترتيب العناصر بمرونة*/
+justify-content: space-between;/*مسافات بين القوائم*/
+align-items:center;
+max-width: 1500px;/*اكبر عرض عشان ميتممدش*/
+margin:20px 80px;/*مسافات من فوق ومن الجوانب*/
+}
+.nav ul{
+display: flex;/*ترتيب العناصر بمروتة*/
+list-style-type: none;/*تشيل نقاط القايمة*/
+justify-content: flex-end;/*تحريك القايمة لليمين*/
+gap: 30px;/*مسافة بين القايمة*/
+}
+.nav a/*تنسيق للينكات*/ {
+    text-decoration: none;/*تشيل الخط اللي تحت القوائم*/
+    color: antiquewhite;
+    font-size: 18px;
+}
+.nav a:hover /*تغير لون القوائم عندالضغط عليها*/{
+    color:aqua;
+}
+.photo{/*اضافة وتنسيق الصورة*/
+  width: 500px;
+  height: 500px;
+  margin: 100px;
+  border: solid #222831;
+  background-image: url(omar.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 300px;/*ازالة الحواف*/
+box-shadow: 0px 0px 30px antiquewhite;
+}
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px 30px;
+    max-width: 1500px;
+}
+.name {
+    text-align: right;
+color:whitesmoke;
+font-size: 50px;
+}
+.title {
+color:whitesmoke;
+font-size: 25px;
+ text-align: right;
+}
+.aboutMy{
+      display: flex;
+    justify-content: space-between;
+    align-items:center;
+      direction: rtl;
+    margin:20px 30px;
+    max-width: 1500px;
+    color: whitesmoke;
+
+}
+.par,.work1, form{
+    font-size: 20px;
+}
+input{
+    padding: 10px;
+   border-radius: 10px;
+}
+.lin a{
+  
+    margin: 20px;
+    display: flex;
+      flex-direction: column; /* عشان يجوا تحت بعض */
+   gap: 15px;
+   color: whitesmoke; 
+    text-decoration: none; /* شيل الخط اللي تحت اللينك */
+    font-size: 18px;
+}
+.lin a:hover {
+    color: aqua; 
+}

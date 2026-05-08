@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omar - Contact Me</title>
+    <link rel="stylesheet" href="start.css" />
+    <style>
+      .logo {
+        text-shadow: 5px 5px 10px yellow;
+        font-size: 40px;
+      }
+      .active-link {
+        color: aqua !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header style="color: antiquewhite">
+      <b class="logo">O/A</b>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">about Me</a></li>
+          <li><a href="work.html">My Work</a></li>
+          <li><a href="contact.html" class="active-link">contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+
+    <main>
+      <!-- CONTACT SECTION -->
+      <section class="aboutMy" id="contactMe">
+        <div>
+          <h2 style="color: aqua">تواصل معي Contact Me</h2>
+          <p class="par">ادخل بياناتك هنا :</p>
+          <form id="contactForm">
+            <label for="user">الاسم : </label>
+            <input id="user" type="text" placeholder="اكتب اسمك هنا" />
+            <br /><br />
+            <label for="em">الايميل : </label>
+            <input id="em" type="email" placeholder="اكتب ايميلك هنا" />
+            <br /><br />
+            <input type="submit" value="إرسال" />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="aboutMy">
+      <div>
+        <h2 style="color: aqua">وسائل التواصل</h2>
+        <div class="lin">
+          <a href="https://www.facebook.com/omar.ahmed.432729" target="_blank">فيسبوك</a>
+          <a href="https://www.linkedin.com/in/omar-ahmed-b102a1393" target="_blank">لينكد إن</a>
+          <a >رقم الموبايل: 01012975889</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("contactForm").onsubmit = function (e) {
+        var name = document.getElementById("user").value;
+        var email = document.getElementById("em").value;
+
+        if (name == "" || email == "") {
+          alert("الرجاء ملء الخانات الفارغة");
+          e.preventDefault();
+        } else if (!email.endsWith("@azhar.edu.eg")) {
+          alert("يجب أن يكون الإيميل تابع لجامعة الازهر");
+          e.preventDefault();
+        }
+      };
+    </script>
+
+  </body>
+</html>
